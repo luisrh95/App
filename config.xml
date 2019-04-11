@@ -14,7 +14,7 @@
     <preference name="android-build-tool" value="gradle" />
     
     <plugin name="cordova-plugin-android-permissions" source="npm" version="0.10.0" />
-   <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
+   
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.0" />
