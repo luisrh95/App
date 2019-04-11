@@ -53,10 +53,10 @@
     
     <!-- CAMARA -->
     
-
-
-
-    
+<gap:config-file platform="android" parent="/manifest" mode="add">
+    <uses-permission android:name="android.permission.CAMERA" />
+</gap:config-file>  
+   
     <!-- CAMARA -->
      
     <platform name="android">
