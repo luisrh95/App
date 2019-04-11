@@ -48,6 +48,13 @@
    <js-module src="js/barcodescanner.js" name="BarcodeScanner">
     <clobbers target="cordova.plugins.barcodeScanner"/>
    </js-module>   
+   
+   <feature name="http://api.phonegap.com/1.0/camera"/>
+   <feature name="http://api.phonegap.com/1.0/media"/>
+   
+<preference name="permissions" value="android.permission-group.MICROPHONE"/>
+<preference name="permissions" value="android.permission.RECORD_AUDIO" />
+<preference name="permissions" value="android.permission.MODIFY_AUDIO_SETTINGS" />  
     
     <!-- QR -->
      
@@ -61,16 +68,7 @@
 		<splash platform="android" qualifier="port-ldpi" src="res/screen/android/ldpi-screen.png" />
 		<splash platform="android" qualifier="port-mdpi" src="res/screen/android/mdpi-screen.png" />
 		<splash platform="android" qualifier="port-hdpi" src="res/screen/android/hdpi-screen.png" />
-		<splash platform="android" qualifier="port-xhdpi" src="res/screen/android/xhdpi-screen.png" />
-   
-   
-        <allow-intent href="market:*" />
-        <preference name="LoadingDialog" value="Bitch, Wait for it" />
-        <preference name="HideKeyboardFormAccessoryBar" value="true" />
-        <preference name="Fullscreen" value="true" />
-        
-  
-        
+		<splash platform="android" qualifier="port-xhdpi" src="res/screen/android/xhdpi-screen.png" />  
     </platform>
     
     <platform name="ios">
