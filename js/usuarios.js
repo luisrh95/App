@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function(){
 //+ dt.getMinutes()  + dt.getSeconds()
-
+$.support.cors = true;
 	
 setInterval( function() {
 var horas = new Date().getHours();
