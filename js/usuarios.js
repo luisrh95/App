@@ -13,7 +13,7 @@ $('#horas').html(''+ time +'');
 	
 
 	
-var url_login = 'https://targetmedios.com/plataform/phps/app_server.php.php';
+var url_login = 'https://targetmedios.com/plataform/phps/app_server.php';
 //iniciar sesion
 $('#loguear').click(function(){
 	var email = $.trim($('#email').val());
@@ -52,7 +52,7 @@ $('#logout').click(function(){
 });
 	
 $("#password_refresh").click(function(){
-   var url_repass = 'https://targetmedios.com/plataform/phps/app_server.php.php';
+   var url_repass = 'https://targetmedios.com/plataform/phps/app_server.php';
    var old_password=$("#old_pass").val();
    var new_password=$("#new_pass").val();
    var rew_password = $("#re_pass").val();
@@ -103,7 +103,7 @@ $("#password_refresh").click(function(){
 //usuario sesion
 if(localStorage.loginstatus == 'true'){
 	
- var url_us = 'https://targetmedios.com/plataform/phps/app_server.php.php?userlog='+ localStorage.loginus +' ';
+ var url_us = 'https://targetmedios.com/plataform/phps/app_server.php?userlog='+ localStorage.loginus +' ';
    $.getJSON(url_us, function(result) {
    console.log(result);
    $.each(result, function(i, field) {
@@ -136,7 +136,7 @@ if(localStorage.loginstatus == 'true'){
 	
 if(localStorage.loginstatus == 'true'){	
 //traemos reportes
-var url = 'https://targetmedios.com/plataform/phps/app_server.php.php?articulos='+ localStorage.loginus +' ';
+var url = 'https://targetmedios.com/plataform/phps/app_server.php?articulos='+ localStorage.loginus +' ';
 $.getJSON(url, function(result) {
 console.log(result);
 $.each(result, function(i, fieldb) {
