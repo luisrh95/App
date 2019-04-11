@@ -104,6 +104,7 @@
     </platform>
     <access origin="https://targetmedios.com/plataform/phps/app_server.php" />
     <access origin="*" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <allow-intent href="https://www.targetmedios.com" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
