@@ -49,9 +49,6 @@
     <clobbers target="cordova.plugins.barcodeScanner"/>
    </js-module>   
    
-   <feature name="http://api.phonegap.com/1.0/camera"/>
-   <feature name="http://api.phonegap.com/1.0/media"/>
-   
     <!-- QR -->
     
     <!-- CAMARA -->
