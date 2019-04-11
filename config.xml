@@ -49,15 +49,7 @@
    </js-module>   
     
     <!-- QR -->
-
-  <feature name="http://api.phonegap.com/1.0/network" />
-  <feature name="http://api.phonegap.com/1.0/camera" /> 
    
-<feature name="Camera">
-    <param name="android-package" value="org.apache.cordova.CameraLauncher" />
-</feature>
-
-<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />  
     
     <platform name="android">
         <icon density="ldpi" src="res/icon/android/ldpi.png" />
