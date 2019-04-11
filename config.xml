@@ -1,4 +1,4 @@
-<widget id="com.phonegap.helloworld" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="https://www.targetmedios.com" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>TargetTiempo</name>
     <description>
        Target Medios, plataforma de ingreso
@@ -11,6 +11,26 @@
     <preference name="android-minSdkVersion" value="14" />
     <preference name="permissions" value="none"/>
     <preference name="orientation" value="portrait"/>
+	<preference name="permissions" value="none"/>
+	<preference name="orientation" value="portrait"/>
+	<preference name="target-device" value="universal"/>
+	<preference name="fullscreen" value="false"/>
+	<preference name="webviewbounce" value="true"/>
+	<preference name="prerendered-icon" value="true"/>
+	<preference name="stay-in-webview" value="true"/>
+	<preference name="ios-statusbarstyle" value="black-opaque"/>
+	<preference name="detect-data-types" value="true"/>
+	<preference name="exit-on-suspend" value="false"/>
+	<preference name="show-splash-screen-spinner" value="true"/>
+	<preference name="auto-hide-splash-screen" value="true"/>
+	<preference name="HideKeyboardFormAccessoryBar" value="true"/>
+	<preference name="disable-cursor" value="false"/>
+	<preference name="android-minSdkVersion" value="14"/>
+	<preference name="android-installLocation" value="auto"/>
+    
+	<preference name="StatusBarOverlaysWebView" value="true" /> 
+	<preference name="StatusBarColor" platform="android" value="#006699" />
+	<preference name="StatusBarStyle" value="lightcontent" />
     
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
@@ -34,9 +54,6 @@
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     
-	<preference name="StatusBarOverlaysWebView" value="true" /> 
-	<preference name="StatusBarColor" platform="android" value="#006699" />
-	<preference name="StatusBarStyle" value="lightcontent" />
     
     <platform name="android">
         <icon density="ldpi" src="res/icon/android/ldpi.png" />
@@ -104,6 +121,7 @@
     </platform>
     <access origin="https://targetmedios.com/plataform/phps/app_server.php" />
     <access origin="*" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <allow-intent href="https://www.targetmedios.com" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
