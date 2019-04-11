@@ -14,7 +14,7 @@
     <preference name="android-build-tool" value="gradle" />
     
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
-    <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.2" />
+    <plugin name="cordova-plugin-camera" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1" />
@@ -49,6 +49,10 @@
     <clobbers target="cordova.plugins.barcodeScanner"/>
    </js-module>   
    
+   <feature name="http://api.phonegap.com/1.0/camera"/>
+   <feature name="http://api.phonegap.com/1.0/media"/>
+   
+
     <!-- QR -->
      
     <platform name="android">
