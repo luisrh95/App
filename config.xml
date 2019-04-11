@@ -14,7 +14,7 @@
     <preference name="android-build-tool" value="gradle" />
     
     <plugin name="cordova-plugin-android-permissions" source="npm" version="0.10.0" />
-    <plugin name="cordova-plugin-camera" source="npm" />
+   <plugin name="Camera" value="org.apache.cordova.camera.Camera" />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.0" />
@@ -31,8 +31,9 @@
     <plugin name="phonegap-plugin-barcodescanner" source="npm" />
     
 	<preference name="StatusBarOverlaysWebView" value="false" /> 
-	<preference name="StatusBarColor" platform="android" value="0xff0000ff" />
 	<preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="StatusBarBackgroundColor" value="#FFFFF" /> 
     <preference name="Fullscreen" value="true" />
 
     <preference name="permissions" value="none" />
