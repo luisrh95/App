@@ -55,6 +55,10 @@
       <param name="android-package" value="org.apache.cordova.CameraLauncher" />
     </feature>
 </platform>
+  
+<edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
+    <string>To scan barcodes</string>
+</edit-config>  
    
     <!-- QR -->
      
