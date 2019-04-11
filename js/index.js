@@ -16,22 +16,10 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-
-document.addEventListener("deviceready", onDeviceReady, false);
-function onDeviceReady() {
-    console.log(navigator.camera);
-}
-
-var resultDiv;
-
-document.addEventListener("deviceready", init, false);
-function init() {
-    document.querySelector("#startScan").addEventListener("touchend", startScan, false);
-    resultDiv = document.querySelector("#results");
-}
-
-function startScan() {
-
+$(document).ready(function(){
+	
+	$('#startScan').click(function(){
+		
     cordova.plugins.barcodeScanner.scan(
         function (result) {
 		var qr_scan = result.text;
@@ -83,5 +71,9 @@ function startScan() {
           disableSuccessBeep: false // iOS and Android				
 		}
     );
+		
+	});
+	
+});
 
-}
+
