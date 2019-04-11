@@ -27,7 +27,7 @@
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-    
+    <plugin name="cordova-plugin-camera" source="npm"  />
     <plugin name="phonegap-plugin-barcodescanner" source="npm" />
     
 	<preference name="StatusBarOverlaysWebView" value="true" /> 
