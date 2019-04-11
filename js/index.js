@@ -16,6 +16,12 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+document.addEventListener("deviceready", onDeviceReady, false);
+function onDeviceReady() {
+    console.log(navigator.camera);
+}
+
 var resultDiv;
 
 document.addEventListener("deviceready", init, false);
