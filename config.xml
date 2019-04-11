@@ -11,6 +11,7 @@
     <preference name="android-minSdkVersion" value="14" />
     <preference name="permissions" value="none"/>
     <preference name="orientation" value="portrait"/>
+    <preference name="android-build-tool" value="gradle" />
     
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.0" />
@@ -33,6 +34,7 @@
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    <plugin name="phonegap-plugin-barcodescanner" />
     
 	<preference name="StatusBarOverlaysWebView" value="true" /> 
 	<preference name="StatusBarColor" platform="android" value="#006699" />
