@@ -35,6 +35,7 @@
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     <plugin name="phonegap-plugin-barcodescanner" />
+    <gap:plugin name="cordova-plugin-camera" source="npm" spec="4.0.2" />
     
 	<preference name="StatusBarOverlaysWebView" value="true" /> 
 	<preference name="StatusBarColor" platform="android" value="#006699" />
@@ -48,12 +49,12 @@
     <clobbers target="cordova.plugins.barcodeScanner"/>
    </js-module>   
     
+<platform name='android'>
+    <uses-permission name="android.permission.CAMERA" />
     <feature name="Camera">
-        <param name="browser-package" value="Camera" />
+      <param name="android-package" value="org.apache.cordova.CameraLauncher" />
     </feature>
-    <feature name="Device">
-        <param name="browser-package" value="Device" />
-    </feature>
+</platform>
    
     <!-- QR -->
      
