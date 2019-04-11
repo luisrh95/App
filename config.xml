@@ -14,7 +14,7 @@
     <preference name="android-build-tool" value="gradle" />
     
     <plugin name="cordova-plugin-android-permissions" source="npm" version="0.10.0" />
-    <plugin name="cordova-plugin-camera" source="npm"  />
+
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.0" />
@@ -27,7 +27,8 @@
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-    <plugin name="cordova-plugin-camera" source="npm"  />
+    <plugin name="cordova-plugin-camera"  />
+    <plugin name="cordova-plugin-whitelist" />
     <plugin name="phonegap-plugin-barcodescanner" source="npm" />
     
 	<preference name="StatusBarOverlaysWebView" value="true" /> 
