@@ -52,10 +52,16 @@
    <feature name="http://api.phonegap.com/1.0/camera"/>
    <feature name="http://api.phonegap.com/1.0/media"/>
    
-<preference name="permissions" value="android.permission-group.MICROPHONE"/>
-<preference name="permissions" value="android.permission.RECORD_AUDIO" />
-<preference name="permissions" value="android.permission.MODIFY_AUDIO_SETTINGS" />  
-    
+        <config-file after="uses-permission" parent="/manifest" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.CAMERA" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+            <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+            <uses-permission android:name="android.permission.BLUETOOTH" />
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+            <uses-permission android:name="android.permission.READ_CONTACTS" />
+            <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+        </config-file>
     <!-- QR -->
      
     <platform name="android">
