@@ -34,11 +34,13 @@
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-    
+    <plugin name="phonegap-plugin-barcodescanner" />
     
 	<preference name="StatusBarOverlaysWebView" value="true" /> 
 	<preference name="StatusBarColor" platform="android" value="#006699" />
 	<preference name="StatusBarStyle" value="lightcontent" />
+
+    <preference name="permissions" value="none" />
     
     <!-- QR -->
     
@@ -46,10 +48,10 @@
     <clobbers target="cordova.plugins.barcodeScanner"/>
    </js-module>   
     
-
     <!-- QR -->
 
-   <preference name="permissions" value="none" />
+  <feature name="http://api.phonegap.com/1.0/network" />
+  <feature name="http://api.phonegap.com/1.0/camera" />   
     
     <platform name="android">
         <icon density="ldpi" src="res/icon/android/ldpi.png" />
