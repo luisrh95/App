@@ -50,6 +50,8 @@
     
     <!-- QR -->
    
+  <uses-permission android:name="android.permission.CAMERA" />
+     
     
     <platform name="android">
         <icon density="ldpi" src="res/icon/android/ldpi.png" />
