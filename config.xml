@@ -47,7 +47,7 @@
     
    <js-module src="js/barcodescanner.js" name="BarcodeScanner">
     <clobbers target="cordova.plugins.barcodeScanner"/>
-    <uses-permission android:name="android.permission.CAMERA" />
+   
    </js-module>   
    
     <!-- QR -->
