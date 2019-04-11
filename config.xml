@@ -30,7 +30,7 @@
     
     <plugin name="phonegap-plugin-barcodescanner" source="npm" />
     
-	<preference name="StatusBarOverlaysWebView" value="true" /> 
+	<preference name="StatusBarOverlaysWebView" value="false" /> 
 	<preference name="StatusBarColor" platform="android" value="0xff0000ff" />
 	<preference name="StatusBarStyle" value="lightcontent" />
     <preference name="Fullscreen" value="true" />
