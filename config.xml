@@ -49,12 +49,13 @@
     <clobbers target="cordova.plugins.barcodeScanner"/>
    </js-module>   
     
-<platform name='android'>
-    <uses-permission name="android.permission.CAMERA" />
-    <feature name="Camera">
-      <param name="android-package" value="org.apache.cordova.CameraLauncher" />
-    </feature>
-</platform>
+ <platform name="android">
+       
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.CAMERA"/>
+        </config-file>
+       
+    </platform>
   
 <edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
     <string>To scan barcodes</string>
