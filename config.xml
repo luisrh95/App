@@ -15,7 +15,7 @@
     
     <plugin name="cordova-plugin-android-permissions" source="npm" version="0.10.0" />
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
-    <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
+    <plugin name="cordova-plugin-camera" source="npm"  />
     <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
     <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1" />
@@ -36,7 +36,7 @@
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     
-    <plugin name="phonegap-plugin-barcodescanner" />
+    <plugin name="phonegap-plugin-barcodescanner" source="npm" />
     
 	<preference name="StatusBarOverlaysWebView" value="true" /> 
 	<preference name="StatusBarColor" platform="android" value="#006699" />
