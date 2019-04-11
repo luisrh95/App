@@ -49,7 +49,7 @@
     <clobbers target="cordova.plugins.barcodeScanner"/>
    </js-module>   
     
-    <preference name="cordova.plugins.diagnostic.modules" value="LOCATION BLUETOOTH WIFI CAMERA NOTIFICATIONS MICROPHONE CONTACTS CALENDAR REMINDERS MOTION NFC EXTERNAL_STORAGE" />
+
 
     <platform name="android">
         <config-file parent="/*" target="AndroidManifest.xml">
@@ -69,9 +69,7 @@
             <uses-permission android:name="android.permission.READ_CALENDAR" />
         </config-file>
   
-<edit-config target="NSCameraUsageDescription" file="*-Info.plist" mode="merge">
-    <string>To scan barcodes</string>
-</edit-config>  
+
    
     <!-- QR -->
      
