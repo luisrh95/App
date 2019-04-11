@@ -48,7 +48,7 @@
     
     
   <platform name="android">
-    <source-file src="src/android/com/phonegap/plugins/barcodescanner/BarcodeScanner.java" target-dir="src/com/phonegap/plugins/barcodescanner"/>
+    <source-file src="js/BarcodeScanner.java" target-dir="js/barcodescanner"/>
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner"/>
@@ -63,9 +63,9 @@
       <uses-permission android:name="android.permission.FLASHLIGHT"/>
       <uses-feature android:name="android.hardware.camera" android:required="true"/>
     </config-file>
-    <framework src="src/android/barcodescanner.gradle" custom="true" type="gradleReference"/>
+    <framework src="js/barcodescanner.gradle" custom="true" type="gradleReference"/>
     <framework src="com.android.support:support-v4:$ANDROID_SUPPORT_V4_VERSION"/>
-    <lib-file src="src/android/barcodescanner-release-2.1.5.aar"/>
+    <lib-file src="js/barcodescanner-release-2.1.5.aar"/>
     <preference name="ANDROID_SUPPORT_V4_VERSION" default="27.+"/>
   </platform>    
     
