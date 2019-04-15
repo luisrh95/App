@@ -28,14 +28,14 @@
     <plugin name="cordova-plugin-splashscreen" source="npm" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
-   <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
+    <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
     
-    <plugin name="phonegap-plugin-barcodescanner" source="npm" />
+    <plugin name="cordova-plugin-barcodescanner" source="npm" />
     
 	<preference name="StatusBarOverlaysWebView" value="false" /> 
 	<preference name="StatusBarColor" platform="android" value="0xff0000ff" />
 	<preference name="StatusBarStyle" value="lightcontent" />
-    <preference name="Fullscreen" value="true" />
+    <preference name="Fullscreen" value="false" />
     <preference name="StatusBarBackgroundColor" value="#990099" /> 
 
     <preference name="permissions" value="none" />
