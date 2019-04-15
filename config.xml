@@ -27,10 +27,12 @@
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-splashscreen" source="npm" />
     <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    <plugin name="cordova-plugin-statusbar" source="npm" spec="~1.2.1" />
     
     <plugin name="phonegap-plugin-barcodescanner" source="npm" />
     
-	<preference name="StatusBarOverlaysWebView" value="false" /> 
+	<preference name="StatusBarOverlaysWebView" value="true" />
 	<preference name="StatusBarColor" platform="android" value="0xff0000ff" />
 	<preference name="StatusBarStyle" value="lightcontent" />
     <preference name="Fullscreen" value="true" />

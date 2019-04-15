@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-statusbar.statusbar.Browser", function(require, exports, module) { /*
+/*
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
  * distributed with this work for additional information
@@ -18,9 +18,17 @@ cordova.define("cordova-plugin-statusbar.statusbar.Browser", function(require, e
  *
  */
 
-function notSupported() {
+function notSupported(win,fail) {
+    //
     console.log('StatusBar is not supported');
-    return false;
+    setTimeout(function(){
+        if (win) {
+            win();
+        }
+        // note that while it is not explicitly supported, it does not fail
+        // this is really just here to allow developers to test their code in the browser
+        // and if we fail, then their app might as well. -jm
+    },0);
 }
 
 module.exports = {
@@ -34,8 +42,9 @@ module.exports = {
     backgroundColorByName: notSupported,
     backgroundColorByHexString: notSupported,
     hide: notSupported,
-    show: notSupported
+    show: notSupported,
+    _ready:notSupported
 };
 
+require("cordova/exec/proxy").add("StatusBar", module.exports);
 
-});

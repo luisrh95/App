@@ -1,4 +1,4 @@
-cordova.define("cordova-plugin-statusbar.statusbar", function(require, exports, module) { /*
+/*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -111,5 +111,3 @@ window.setTimeout(function () {
 }, 0);
 
 module.exports = StatusBar;
-
-});
