@@ -18,17 +18,9 @@
  *
  */
 
-function notSupported(win,fail) {
-    //
+function notSupported() {
     console.log('StatusBar is not supported');
-    setTimeout(function(){
-        if (win) {
-            win();
-        }
-        // note that while it is not explicitly supported, it does not fail
-        // this is really just here to allow developers to test their code in the browser
-        // and if we fail, then their app might as well. -jm
-    },0);
+    return false;
 }
 
 module.exports = {
@@ -42,9 +34,6 @@ module.exports = {
     backgroundColorByName: notSupported,
     backgroundColorByHexString: notSupported,
     hide: notSupported,
-    show: notSupported,
-    _ready:notSupported
+    show: notSupported
 };
-
-require("cordova/exec/proxy").add("StatusBar", module.exports);
 
