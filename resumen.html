@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>TargetMedios</title>
+
+</head>
+
+<body>
+ 
+   
+<div class="menu">
+  
+  <header>
+    <h1 class="header_sub">
+    <a href="menu.html"><img src="img/navegacion_atras.png"/></a>
+    MENÚ
+    </h1>
+  </header>
+ <br/><br/>
+  <div id="results">  
+    <h2 id="msm_repor">aa</h2><!-- alerta -->
+    <p class="reprt_date">aa</p><!-- hora -->
+    <h3 id="msm_ok">aa</h3><!-- server -->
+  </div>  
+ <br/><br/>
+  
+  <section class="menu_ops code_cont">
+   <h2>Descripción de hora extra</h2>
+   
+   <textarea id="resumen" ></textarea>
+   <input type="text" value="ids" id="ids" hidden=""/>
+   <input type="submit" id="send_resumen" value="ENVIAR"/>
+   
+  </section>
+  <br/>
+  <h2 id="error_res"></h2>
+
+
+</div><!-- menu inicial -->
+     
+<footer><p>www.targetmedios.com</p></footer>           
+      
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/usuarios.js"></script>
+
+    <script type="text/javascript">
+	(function($) {  
+		$.get = function(key)   {  
+			key = key.replace(/[\[]/, '\\[');  
+			key = key.replace(/[\]]/, '\\]');  
+			var pattern = "[\\?&]" + key + "=([^&#]*)";  
+			var regex = new RegExp(pattern);  
+			var url = unescape(window.location.href);  
+			var results = regex.exec(url);  
+			if (results === null) {  
+				return null;  
+			} else {  
+				return results[1];  
+			}  
+		}  
+		$('#ids').val(''+$.get("id")+'');
+		$("#msm_repor").html(''+$.get("alerta")+'');
+		$(".reprt_date").html(''+$.get("hora")+'');
+		$("#msm_ok").html(''+$.get("server")+'');
+	})(jQuery);  
+		
+	</script>
+
+</body>
+
+</html>

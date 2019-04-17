@@ -40,10 +40,18 @@ $(document).ready(function(){
 		   var alerta = field.alerta;
 		   var hora = field.hora;
 		   var server = field.server;
+		   var reporte = field.reporte;
+		   var ids = field.ids;
 		   //ejecutamos accion
 		   $("#msm_repor").html(''+ alerta +'');
 		   $(".reprt_date").html(''+ hora +'');
 		   $("#msm_ok").html(''+ server +'');
+			  
+		   if(reporte === 'true'){
+			   
+			  window.location.href = "resumen.html?alerta="+ alerta +"&hora="+hora+"&server="+server+"&id="+ids+" "; 
+			   
+		   }
 		    
 		  });
 

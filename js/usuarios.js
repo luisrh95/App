@@ -96,6 +96,7 @@ $("#password_refresh").click(function(){
 					}
 				}
 			});
+			
 		}return false;
 
 });	
@@ -150,6 +151,38 @@ $.each(result, function(i, fieldb) {
 }else{
 	
 }
+	
+//subir horas extra
+$('#send_resumen').click(function(){
+	var reporting = 'https://targetmedios.com/plataform/phps/app_server.php';
+	var id = $('#ids').val();
+	var resumen = $('#resumen').val();
+	var dataString = 'resumen='+resumen+'&id='+id+'&send_resumen=';
+	if($.trim(id).length>0 && $.trim(resumen).length>0){
+		
+			$.ajax({
+				type: "POST",
+				url: reporting,
+				data: dataString,
+				crossDomain: true,
+				cache: false,
+				beforeSend: function(){ $("#error_res").text('Enviando...');},
+				success: function(data){
+					if(data === "true")
+					{
+						$('#error_res').text("Reporte enviado");
+						   $("#resumen").attr('id', 'null');
+					}
+					else{
+						$('#error_res').text("Error, reenvia de nuevo");
+					}
+				}
+			});
+		
+	}else{
+		$('#error_res').html('Completa la información');
+	}return false;
+});
 	
 });
 
