@@ -26,6 +26,7 @@
     <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
     
     <plugin name="cordova-plugin-barcodescanner" source="npm" />
+    <plugin name="cordova-plugin-ShortcutPlugin" spec="0.1.1" source="pgb" />
     
 	<preference name="StatusBarOverlaysWebView" value="false" /> 
 	<preference name="StatusBarColor" platform="android" value="0xff0000ff" />
