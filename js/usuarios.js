@@ -171,7 +171,8 @@ $('#send_resumen').click(function(){
 					if(data === "true")
 					{
 						$('#error_res').text("Reporte enviado");
-						   $("#resumen").attr('id', 'null');
+						$("#resumen").attr('id', 'null');
+						window.setTimeout(window.location.href = "menu.html",5000);
 					}
 					else{
 						$('#error_res').text("Error, reenvia de nuevo");
