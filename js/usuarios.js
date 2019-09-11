@@ -1,7 +1,7 @@
 // JavaScript Document
 $(document).ready(function(){
 //+ dt.getMinutes()  + dt.getSeconds()
-$.support.cors = true;
+
 	
 setInterval( function() {
 var horas = new Date().getHours();
@@ -13,7 +13,7 @@ $('#horas').html(''+ time +'');
 	
 
 	
-var url_login = 'https://targetmedios.com/plataform/phps/app_server.php';
+var url_login = 'https://www.targetmedios.com/plataform/phps/app_server.php';
 //iniciar sesion
 $('#loguear').click(function(){
 	var email = $.trim($('#email').val());
@@ -52,7 +52,7 @@ $('#logout').click(function(){
 });
 	
 $("#password_refresh").click(function(){
-   var url_repass = 'https://targetmedios.com/plataform/phps/app_server.php';
+   var url_repass = 'https://www.targetmedios.com/plataform/phps/app_server.php';
    var old_password=$("#old_pass").val();
    var new_password=$("#new_pass").val();
    var rew_password = $("#re_pass").val();
@@ -96,7 +96,6 @@ $("#password_refresh").click(function(){
 					}
 				}
 			});
-			
 		}return false;
 
 });	
@@ -104,7 +103,7 @@ $("#password_refresh").click(function(){
 //usuario sesion
 if(localStorage.loginstatus == 'true'){
 	
- var url_us = 'https://targetmedios.com/plataform/phps/app_server.php?userlog='+ localStorage.loginus +' ';
+ var url_us = 'https://www.targetmedios.com/plataform/phps/app_server.php?userlog='+ localStorage.loginus +' ';
    $.getJSON(url_us, function(result) {
    console.log(result);
    $.each(result, function(i, field) {
@@ -137,7 +136,7 @@ if(localStorage.loginstatus == 'true'){
 	
 if(localStorage.loginstatus == 'true'){	
 //traemos reportes
-var url = 'https://targetmedios.com/plataform/phps/app_server.php?articulos='+ localStorage.loginus +' ';
+var url = 'https://www.targetmedios.com/plataform/phps/app_server.php?articulos='+ localStorage.loginus +' ';
 $.getJSON(url, function(result) {
 console.log(result);
 $.each(result, function(i, fieldb) {
@@ -151,39 +150,6 @@ $.each(result, function(i, fieldb) {
 }else{
 	
 }
-	
-//subir horas extra
-$('#send_resumen').click(function(){
-	var reporting = 'https://targetmedios.com/plataform/phps/app_server.php';
-	var id = $('#ids').val();
-	var resumen = $('#resumen').val();
-	var dataString = 'resumen='+resumen+'&id='+id+'&send_resumen=';
-	if($.trim(id).length>0 && $.trim(resumen).length>0){
-		
-			$.ajax({
-				type: "POST",
-				url: reporting,
-				data: dataString,
-				crossDomain: true,
-				cache: false,
-				beforeSend: function(){ $("#error_res").text('Enviando...');},
-				success: function(data){
-					if(data === "true")
-					{
-						$('#error_res').text("Reporte enviado");
-						$("#resumen").attr('id', 'null');
-						window.setTimeout(window.location.href = "menu.html",5000);
-					}
-					else{
-						$('#error_res').text("Error, reenvia de nuevo");
-					}
-				}
-			});
-		
-	}else{
-		$('#error_res').html('Completa la información');
-	}return false;
-});
 	
 });
 
